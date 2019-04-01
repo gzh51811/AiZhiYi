@@ -3,7 +3,7 @@
  * @writer: 咕鸽仙人
  * @LastEditors: 咕鸽仙人
  * @Date: 2019-04-1 15:35:38
- * @LastEditTime: 2019-04-01 20:41:57
+ * @LastEditTime: 2019-04-01 20:51:05
  */
 ```
 
@@ -90,7 +90,7 @@
   * u_id          //商品的 _id     (objectNumber)
 
 * user (用户)
-  * uIng          //用户头像        (统一用 : https://www.aizhiyi.com/data/upload/shop/avatar/1.png?timestemp=1554122083174)
+  * uImg          //用户头像        (统一用 : https://www.aizhiyi.com/data/upload/shop/avatar/1.png?timestemp=1554122083174)
 
   * name          // 用户名         (string)
   * phone         // 手机号         (string)
