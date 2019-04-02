@@ -76,7 +76,7 @@ class App extends Component {
         <footer className="footer-nav" id="footer">
           <ul>
             {this.state.navs.map(item => <li key={item.name} onClick={this.handleClick.bind(this,item.name)}>
-              <Icon type={item.icon} style={{ 'fontSize': '21px' }} /><p>{item.text}</p>
+              <Icon type={item.icon}  style={{ 'fontSize': '21px','color':(item.name==this.state.current?'red':'')}} /><p>{item.text}</p>
             </li>)}
           </ul>
         </footer>
