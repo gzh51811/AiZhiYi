@@ -3,7 +3,7 @@
  * @writer: 咕鸽仙人
  * @LastEditors: 咕鸽仙人
  * @Date: 2019-04-1 15:35:38
- * @LastEditTime: 2019-04-03 11:22:46
+ * @LastEditTime: 2019-04-04 11:08:18
  */
 ```
 
@@ -77,13 +77,46 @@
   * gShop         // 专馆(店铺)  (string) (例 : 文创生活馆)
   * gImg          // 商品图片    (图片地址)
 
-* shop (专馆)
-  * sName         // 店名        (string)
-  * sImg          // 店头像       (例子 : https://www.aizhiyi.com/data/upload/shop/store/05875850289035485_sm.jpg?v=14)
 
-  * sPicture      // 店图片       (例子 : https://www.aizhiyi.com/data/upload/shop/store_joinin/05875850026611223.jpg)
+* store_list (专馆)
+  * "store_id"    	//商店id
+  * "store_collect" //商店被收藏数量
+  * "store_avatar"  //商店头像
+  * "store_name"  	//商店名称
 
-  * sWelcome      // 收藏人数      (string)
+* goods_bigClass (商品大分类：如民俗文化、茶艺茶道)
+  *	"gc_id"        //商品分类id
+  * "gc_name"      //商品分类名称
+  *	"text"         //商品小分类名称（如："陶瓷/雕塑/布艺/锻造"）
+  * "wap_goodsclass_image_info": {
+		"image_name": "_05856724964122215.jpg",  // 图片名称
+		"image_path": "https://www.aizhiyi.com/data/upload/shop/goods_class/_05856724964122215.jpg" // 图片路径
+	}
+
+* goods_smallClass (商品小分类：如陶瓷、雕塑)
+  * "gc_id": "1819"  //商品分类id
+  * "gc_name":       //商品分类名称
+  * "wap_goodsclass_image_info": {
+	  	"wap_advs1": {
+				"image_name": "_05476685004113383.png", // 图片名称
+				"image_path": "https://www.aizhiyi.com/data/upload/shop/goods_class/_05476685004113383.png" // 图片路径
+			}
+	},
+  * "child": [// （子分类：如彩瓷、青瓷）
+		{
+			"gc_id": "1848",  //商品分类id
+			"gc_name": "文具", //商品分类名称
+			"wap_goodsclass_image_info": {
+				"wap_advs1": {
+					"image_name": "_05483571251410122.png", // 图片名称
+					"image_path": "https://www.aizhiyi.com/data/upload/shop/goods_class/_05483571251410122.png" // 图片路径
+				}
+			}
+		}
+	]
+
+
+
 
 * cart (购物车)
   * userName      //用户名
@@ -97,5 +130,3 @@
   * phone         // 手机号         (string)
   * pass          // 密码           (string)
   * sex           // 性别           (string) (默认保密 可更改?)
-
-
