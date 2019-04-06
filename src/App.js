@@ -5,8 +5,12 @@ import Fuli from './pages/Fuli';
 import Cate from './pages/Cate';
 import Cart from './pages/Cart';
 import User from './pages/User/User';
-import UserInfo from './pages/UserInfo/UserInfo'
+import UserInfo from './pages/UserInfo/UserInfo';
+import UserSetting from './pages/UserSetting/UserSetting';
+import UserLogin from './pages/UserLogin/UserLogin';
+import UserRegister from './pages/UserRegister/UserRegister';
 
+import './css/base.css';
 import './App.css';
 import './rem';
 
@@ -51,6 +55,7 @@ class App extends Component {
       current: 'Home'
     }
   }
+
   handleClick(key){
       this.setState({
         current: key
@@ -74,6 +79,9 @@ class App extends Component {
             <Route path="/cart" component={Cart} />
             <Route path="/user" component={User} />
             <Route path="/user_info" component={UserInfo} />
+            <Route path="/user_setting" component={UserSetting} />
+            <Route path="/user_login" component={UserLogin} />
+            <Route path="/user_register" component={UserRegister} />
             {/* <Route path="/" render={()=><div>我的首页</div>} exact/> */}
             <Redirect from="/" to="/home" />{/* 404 */}
           </Switch>
@@ -88,7 +96,7 @@ class App extends Component {
           })?<footer className="footer-nav" id="footer">
           <ul>
             {this.state.navs.map(item => <li key={item.name} onClick={this.handleClick.bind(this,item.name)}>
-              <Icon type={item.icon}  style={{ 'fontSize': '.42rem','color':(item.name===this.state.current?'red':'')}} /><p>{item.text}</p>
+              <Icon type={item.icon}  style={{ 'fontSize': '.42rem','color':(item.path===location.pathname?'red':'')}} /><p>{item.text}</p>
             </li>)}
           </ul>
         </footer>:''

@@ -5,12 +5,12 @@
 import React, { Component } from 'react';
 
 import './UserInfo.css';
-class Cart extends Component {
+class UserInfo extends Component {
     goBack=()=>{
         this.props.history.goBack();
     }
     render() {
-        return <div className="cart">
+        return <div>
             <header className="personal_header">
                 <div className="header-wrap">
                     <div className="header-l">
@@ -79,4 +79,4 @@ class Cart extends Component {
     }
 }
 
-export default Cart;
+export default UserInfo;

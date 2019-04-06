@@ -1,0 +1,320 @@
+.horn {
+    margin-top: 0.88rem;
+    height: 0.71rem;
+    background-color: #FEF9F6;
+    box-shadow: 0 1px 0 0 rgba(216,216,216,0.50);
+    line-height: 0.71rem;
+    color: #D33D3C;
+    font-size: 0.24rem;
+}
+.horn .img_box {
+    display: inline-block;
+    width: 0.44rem;
+    height: 0.4rem;
+    margin: 0.15rem 0.4rem;
+    position: relative;
+    background: url(../../images/icon_laba_1.png?222);
+    background-size: 100% 100%;
+    float: left;
+    -webkit-animation: changeImg 1s infinite;
+    -moz-animation: changeImg 1s infinite;
+    -o-keyframes: changeImg 1s infinite;
+    animation: changeImg 1s infinite;
+}
+.horn h3 {
+    display: inline-block;
+    margin-left: 10%;
+    color: #D33D3C;
+}
+.Nlogin .portrait {
+    margin-top: 0.5rem;
+    margin-bottom: -0.5rem;
+}
+.Nlogin .portrait span {
+    width: 1.4rem;
+    height: 1.4rem;
+}
+.portrait span {
+    display: inline-block;
+    width: 3.46rem;
+    height: 3.46rem;
+    background: url(../../images/logo@2x.png?888) no-repeat center;
+    margin: 0 auto;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    -ms-background-size: 100% 100%;
+    background-size: 100% 100%;
+}
+.Nlogin .nctouch-main-layout {
+    margin-top: 0.8rem;
+}
+.Nlogin .nctouch-inp-con {
+    padding: 0 40px;
+}
+.nctouch-inp-con {
+    display: block;
+    clear: both;
+    padding: 0;
+}
+.Nlogin .nctouch-inp-con ul li {
+    margin-left: 0;
+    height: 0.4rem;
+    line-height: 0.4rem;
+    min-height: 0.4rem;
+    border-bottom: 1px solid #D8D8D8;
+    padding-bottom: .6rem;
+    /* margin-top: .8rem; */
+    margin-bottom: .4rem;
+}
+
+.Nlogin .form-item {
+    position: relative;
+}
+.Nlogin .form-item i.nameico {
+    background: url(../../images/login5.png?888) no-repeat left center;
+    background-size: 100% 100%;
+}
+
+.Nlogin .form-item i {
+    position: absolute;
+    display: block;
+    top: 50%;
+    left: 0;
+    margin-top: -0.2rem;
+    width: 0.3rem;
+    height: 0.4rem;
+    z-index: 10;
+}
+.Nlogin .nctouch-inp-con ul li .input-box.login-btn {
+    position: absolute;
+    left: 0;
+    top: .12rem;
+    margin-left: 0;
+    height: auto;
+}
+
+.nctouch-inp-con ul li .input-box.login-btn {
+    margin: 0 0 0 3.8rem;
+}
+.Nlogin .nctouch-inp-con ul li .input-box .inp {
+    height: 0.4rem;
+    line-height: 0.4rem;
+    padding: 0;
+    font-size: 0.28rem;
+    min-height: 0.4rem;
+    text-indent: 0;
+    padding-left: 0.5rem;
+}
+.Nlogin .form-item em.eye {
+    position: absolute;
+    width: 0.8rem;
+    height: 0.52rem;
+    display: block;
+    background: url(../../images/login3.png) no-repeat right center;
+    background-size: 0.4rem 0.26rem;
+    right: 0;
+    top: 50%;
+    margin-top: -0.2rem;
+}
+.Nlogin .form-item i.pwdico {
+    background: url(../../images/login7.png?777) no-repeat left center;
+    background-size: 100% 100%;
+}
+
+.Nlogin .remember-form {
+    margin: 0.3rem 0 0.72rem 0;
+    height: 0.26rem;
+    line-height: 0.26rem;
+    font-size: 0.26rem;
+}
+
+.remember-form {
+    height: 0.9rem;
+    margin: 0.6rem 0rem 0 2rem;
+    position: relative;
+}
+.Nlogin .nctouch-inp-con .form-btn.tel {
+    margin: 0;
+    background: none;
+    display: inline;
+}
+
+
+.nctouch-inp-con .form-btn.go {
+    margin-top: 0.4rem;
+}
+.nctouch-inp-con .form-btn {
+    text-align: center;
+}
+.nctouch-inp-con .form-btn {
+    margin-top: 0.5rem;
+}
+.Nlogin .nctouch-inp-con .form-btn.tel .btn {
+    height: auto;
+    font-size: 0.26rem;
+    color: #999 !important;
+    line-height: 0.26rem;
+    background: none;
+    margin: 0;
+    text-align: left;
+    width: auto;
+}
+.Nlogin .remember-form .forgot-password {
+    color: #999;
+    font-size: 0.26rem;
+    line-height: 0.26rem;
+}
+
+.remember-form .forgot-password:visited {
+    color: #f9493c;
+}
+.remember-form .forgot-password {
+    position: absolute;
+    right: 0;
+    top: 0;
+    line-height: 0.9rem;
+    font-size: 0.7rem;
+    color: #f9493c;
+}
+.nctouch-inp-con .form-btn.confirm {
+    margin-top: 0.72rem;
+}
+
+.nctouch-inp-con .form-btn {
+    text-align: center;
+}
+.nctouch-inp-con .form-btn.confirm.active .btn {
+    background-color: rgba(211,61 ,60 ,1);
+}
+
+.nctouch-inp-con .form-btn.confirm .btn {
+    width: 100%;
+    height: 0.9rem;
+    border-radius: 0.12rem;
+    background-color: rgba(211,61 ,60 ,0.4);
+    margin: 0 0 0 0;
+    font-size: 0.32rem;
+    color: #FFFFFF !important;
+    line-height: 0.95rem;
+}
+.nctouch-inp-con .form-btn.ok .btn {
+    color: #FFF !important;
+    background: #d33d3c;
+}
+.Nlogin .joint-login {
+    padding: 0;
+    margin: 0.61rem 0.75rem 0;
+}
+.joint-login {
+    z-index: 2;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    padding: 0 1.7rem;
+}
+.Nlogin .joint-login h2 {
+    border-bottom: solid 1px #ddd;
+    height: 0.36rem;
+}
+.joint-login h2 {
+    height: 1.1rem;
+    border-bottom: solid #CCC 0.05rem;
+}
+.Nlogin .joint-login h2 span {
+    font-size: 0.26rem;
+    color: #BBBBBB;
+    line-height: 0.26rem;
+    height: 0.26rem;
+    padding: 0 0.25rem;
+}
+
+.joint-login h2 span {
+    display: inline-block;
+    height: 0.9rem;
+    line-height: 0.9rem;
+    padding: 0 0.6rem;
+    background-color: #f5f5f5;
+    color: #666;
+    font-size: 0.6rem;
+    -webkit-transform: translate3d(0, 50%, 0);
+    -ms-transform: translate3d(0, 50%, 0);
+    transform: translate3d(0, 50%, 0);
+}
+.Nlogin .joint-login ul {
+    width: 100%;
+    margin-top: 0.6rem;
+}
+
+.joint-login ul {
+    display: inline-block;
+    width: 10rem;
+    margin: 1rem auto 0;
+    font-size: 0;
+}
+.Nlogin .joint-login.active li {
+    width: 50%;
+}
+.Nlogin .joint-login ul li {
+    width: 33.3%;
+    border: 0;
+    border-radius: 50%;
+    margin-bottom: 0;
+    height: 1rem;
+    float: left;
+    position: relative;
+}
+
+.joint-login ul li {
+    width: 100%;
+    height: 1.7rem;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 3rem;
+    margin-bottom: 0.5rem;
+}
+.disclick {
+    position: absolute;
+    z-index: 200;
+    background: #000;
+    opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+.Nlogin .joint-login ul li a {
+    text-align: center;
+    line-height: normal;
+}
+.joint-login ul li a {
+    width: 100%;
+    font-size: 0.64rem;
+    line-height: 1.6rem;
+    display: inline-block;
+    color: #666;
+    text-align: left;
+}
+.Nlogin .joint-login ul li .qq i {
+    background-image: url(../../images/login9.png?999);
+}
+.Nlogin .joint-login ul li .weibo i {
+    background-image: url(../../images/login10.png?888);
+}
+.Nlogin .joint-login ul li a i {
+    width: 1rem;
+    height: 1rem;
+    background-size: 100%;
+    margin: 0;
+}
+.joint-login ul li a i {
+    display: inline-block;
+    width: 1.7rem;
+    height: 1.7rem;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    margin-right: 1.5rem;
+    margin-left: 0.7rem;
+    vertical-align: middle;
+    background-size: 70%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+}

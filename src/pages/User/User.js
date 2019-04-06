@@ -1,8 +1,10 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable jsx-a11y/anchor-has-content */
 /* eslint-disable no-script-url */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React,{Component} from 'react';
+
 import './User.css';
-import { NavLink } from 'react-router-dom';
 class User extends Component{
     constructor(){
         super();
@@ -10,18 +12,24 @@ class User extends Component{
 
         }
     }
+    gotoUserInfo = ()=>{
+        this.props.history.push('/user_info');
+    }
+    gotoLogin = ()=>{
+        this.props.history.push('/user_login');
+    }
+    gotoUserSetting = ()=>{
+        this.props.history.push('/user_setting');
+    }
     render(){
         return <div className="scroller-body">
             <div className="scroller-box">
-                <div className='member-top'>
+                {/* <div className='member-top active'>
                     <div className='member-info'>
                         <div className='user-avatar'>
-                            <NavLink to='/user_info'>
-                                <img src={require("./images/minren.jpg")} alt=""/>
-                            </NavLink>
-                        </div>
-                        <div className='vip-pic'>
-                            
+                            <a href="javascript:;" onClick={this.gotoUserInfo}>
+                                <img src={require("../../images/minren.jpg")} alt=""/>
+                            </a>
                         </div>
                         <a href="javascript:;">
                             <div className='user-name'>
@@ -36,7 +44,6 @@ class User extends Component{
 
                             </div>
                         </a>
-                        
                     </div>
                     <a href="javascript:;" id="enter_code" className='qrcode_icon'>
                         <span></span>
@@ -51,6 +58,12 @@ class User extends Component{
                             <i></i>
                             关注的好友 (0)
                         </a>
+                    </div>
+                </div> */}
+                <div className="member-top">
+                    <div className="member-info">
+                        <a href="javascript:;" className="default-avatar" onClick={this.gotoLogin}></a>
+                        <a href="javascritpt:;" className="to-login" onClick={this.gotoLogin}>点击登录</a>
                     </div>
                 </div>
                 <div className='member-center'>
@@ -178,7 +191,7 @@ class User extends Component{
                             </a>
                         </dt>
                         <dt>
-                            <a href="javascript:;" id="setting" className="account-login">
+                            <a href="javascript:;" onClick={this.gotoUserSetting}  id="setting" className="account-login">
                                 <h3>
                                     <i className="mc-09"></i>
                                     <p>设置</p>

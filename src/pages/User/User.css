@@ -2,11 +2,6 @@ img {
     vertical-align: top;
     border: none;
 }
-:not(input) {
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-    -webkit-touch-callout: none;
-    -webkit-text-size-adjust: none;
-}
 .scroller-body {
     bottom: 3rem;
 }
@@ -19,25 +14,9 @@ img {
     z-index: auto;
 }
 .scroller-box {
-    
     padding-bottom: 1.1rem;
 }
-.member-top.active {
-    height: 2.52rem;
-}
-.member-top {
-    background-color: #D33d3c;
-    width: 100%;
-    /* height: 1.72rem; */
-    height: 2.52rem;
-    position: relative;
-    z-index: 1;
-    /* background-image: url(../images/member_top_bg.png); */
-}
-.member-info {
-    margin-left: 0.29rem;
-    /* margin-bottom: 0.74rem; */
-}
+
 .member-info .user-avatar {
     width: 1.3rem;
     height: 1.3rem;
@@ -106,7 +85,7 @@ img {
     float: left;
     width: 0.6rem;
     height: 0.6rem;
-    background: url(./images/code_member.png) no-repeat center;
+    background: url(../../images/code_member.png) no-repeat center;
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
 }
@@ -116,7 +95,7 @@ img {
     width: 0.22rem;
     height: 0.42rem;
     margin-top: 0.1rem;
-    background: url(./images/center_arrow.png) no-repeat center;
+    background: url(../../images/center_arrow.png) no-repeat center;
     -webkit-background-size: 100% 100%;
     background-size: 100% 100%;
 }
@@ -153,13 +132,13 @@ img {
     height: 0.32rem;
     vertical-align: middle;
     margin-right: 0.2rem;
-    background: url(./images/circle.png) no-repeat center;
+    background: url(../../images/circle.png) no-repeat center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
 .member-top .friends_circle a.friends i {
     width: 0.3rem;
-    background-image: url(./images/friends.png);
+    background-image: url(../../images/friends.png);
 }
 .member-top .friends_circle a i {
     display: inline-block;
@@ -167,10 +146,33 @@ img {
     height: 0.32rem;
     vertical-align: middle;
     margin-right: 0.2rem;
-    background: url(./images/circle.png) no-repeat center;
+    background: url(../../images/circle.png) no-repeat center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
 }
+
+.member-info .default-avatar {
+    background-color: #fff;
+    background-image: url(../../images/icon_tx.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 60%;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 100%;
+    position: absolute;
+    top: 0.2rem;
+    border: 2px solid #d8d8d8;
+}
+.member-info .to-login {
+    font-size: 0.32rem;
+    color: #FFF;
+    position: absolute;
+    top: 0.68rem;
+    left: 2.03rem;
+    letter-spacing: 0.02rem;
+}
+
 .member-center dl {
     background-color: #FFF;
     box-shadow: 0 1px 0 0 rgba(216,216,216,0.50);
@@ -222,7 +224,7 @@ dl.my-order {
     vertical-align: middle;
     width: 0.14rem;
     height: 0.257rem;
-    background-image: url(./images/icon_next.png);
+    background-image: url(../../images/icon_next.png);
     background-repeat: no-repeat;
     /* background-position: 50% 50%; */
     background-size: 100% 100%;
@@ -260,23 +262,23 @@ dl.my-order {
     height: 0.42rem;
 }
 i.cc-01 {
-    background-image: url(./images/member/z15.png);
+    background-image: url(../../images/member/z15.png);
     background-size: cover;
 }
 i.cc-02 {
-    background-image: url(./images/member/z16.png);
+    background-image: url(../../images/member/z16.png);
     background-size: 100% 100%;
 }
 i.cc-03 {
-    background-image: url(./images/member/z17.png);
+    background-image: url(../../images/member/z17.png);
     background-size: cover;
 }
 i.cc-04 {
-    background-image: url(./images/member/z18.png);
+    background-image: url(../../images/member/z18.png);
     background-size: 100% 100%;
 }
 i.cc-05 {
-    background-image: url(./images/member/z19.png);
+    background-image: url(../../images/member/z19.png);
     background-size: 100% 100%;
 }
 
@@ -341,36 +343,36 @@ i.cc-05 {
     position: relative;
 }
 .member-center dt h3 i.mc-02 {
-    background-image: url(./images/member/z25.png);
+    background-image: url(../../images/member/z25.png);
 }
 .member-center dt h3 i.mc-04 {
-    background-image: url(./images/member/z20.png);
+    background-image: url(../../images/member/z20.png);
 }
 .member-center dt h3 i.mc-gift {
-    background-image: url(./images/member/z24.png);
+    background-image: url(../../images/member/z24.png);
 }
 .member-center dt h3 i.mc-03 {
-    background-image: url(./images/member/z22.png);
+    background-image: url(../../images/member/z22.png);
 }
 .member-center dt h3 i.mc-06 {
-    background-image: url(./images/member/z27.png);
+    background-image: url(../../images/member/z27.png);
 }
 .member-center dt h3 i.mc-07 {
     /* width: 0.5rem;
     height: 0.5rem; */
-    background-image: url(./images/member/z30.png);
+    background-image: url(../../images/member/z30.png);
 }
 .member-center dt h3 i.mc-08 {
     /* width: 0.5rem;
     height: 0.5rem; */
-    background-image: url(./images/member/z21.png);
+    background-image: url(../../images/member/z21.png);
 }
 .member-center dt h3 i.mc-01 {
-    background-image: url(./images/member/z28.png);
+    background-image: url(../../images/member/z28.png);
 }
 .member-center dt h3 i.mc-help {
-    background-image: url(./images/member/z23.png);
+    background-image: url(../../images/member/z23.png);
 }
 .member-center dt h3 i.mc-09 {
-    background-image: url(./images/member/z26.png);
+    background-image: url(../../images/member/z26.png);
 }

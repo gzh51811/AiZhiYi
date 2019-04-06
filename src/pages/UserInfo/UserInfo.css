@@ -1,30 +1,7 @@
 header{
     display: block;
 }
-header, .header {
-    height: 0.88rem;
-    position: fixed;
-    z-index: 500;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: auto;
-    background: #d33d3c;
-}
-.header-wrap {
-    display: block;
-    min-width: 320px;
-    max-width: 640px;
-    margin: 0 auto;
-    text-align: center;
-}
-.header-l {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-}
+
 
 a:active {
     color: #0062cc;
@@ -33,47 +10,13 @@ a:active {
 a:active, a:hover {
     outline: 0;
 }
-.header-l a {
-    position: absolute;
-    z-index: 1;
-    display: inline-block;
-    width: 0.44rem;
-    height: 0.44rem;
-    left: .18rem;
-    top: .22rem;
-    /* padding: 0.22rem 0 0.22rem 0.18rem; */
-}
+
 a {
     text-decoration: none;
     color: #007aff;
 }
 a {
     background: 0 0;
-}
-.header-l a i.back {
-    width: 100%;
-    height: 100%;
-    background-image: url(./images/arrow@2x.png);
-    background-position: 50% 50%;
-    background-repeat: no-repeat;
-    background-size: 100%;
-}
-.header-l a i {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-.header-title {
-    display: inline-block;
-    margin: 0 auto;
-}
-.header-title h1 {
-    font-size: 0.34rem;
-    height: 0.88rem;
-    line-height: 0.88rem;
-    color: #fff;
-    margin: 0;
-    font-family: "Microsoft YaHei",Helvetica,sans-serif,Arial;
 }
 .personal_body {
     margin-top: 0.98rem;
@@ -201,7 +144,7 @@ input, select, textarea {
     vertical-align: middle;
     width: 0.14rem;
     height: 0.257rem;
-    background-image: url(./images/icon_next.png);
+    background-image: url(../../images/icon_next.png);
     background-repeat: no-repeat;
     
     background-size: 100% 100%;

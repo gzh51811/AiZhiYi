@@ -1,3 +1,5 @@
+/* eslint-disable no-useless-escape */
+/* eslint-disable no-unused-expressions */
 
 (function () {
     var a = "@charset \"utf-8\";html{color:#000;background:#fff;overflow-y:scroll;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%}html *{outline:0;-webkit-text-size-adjust:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}html,body{font-family:sans-serif}body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0}input,select,textarea{font-size:100%}table{border-collapse:collapse;border-spacing:0}fieldset,img{border:0}abbr,acronym{border:0;font-variant:normal}del{text-decoration:line-through}address,caption,cite,code,dfn,em,th,var{font-style:normal;font-weight:500}ol,ul{list-style:none}caption,th{text-align:left}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:500}q:before,q:after{content:''}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}a:hover{text-decoration:underline}ins,a{text-decoration:none}"
@@ -18,14 +20,12 @@
         var b = f.getBoundingClientRect().width;
         b / i > 750 && (b = 750 * i);
         var c = b / 7.5;
-        // eslint-disable-next-line no-unused-expressions
         f.style.fontSize = c + "px",
             k.rem = a.rem = c
     }
     var d, e = a.document, f = e.documentElement, g = e.querySelector('meta[name="viewport"]'), h = e.querySelector('meta[name="flexible"]'), i = 0, j = 0, k = b.flexible || (b.flexible = {});
     if (g) {
         var l = g.getAttribute("content").match(/initial\-scale=([\d\.]+)/);
-        // eslint-disable-next-line no-unused-expressions
         l && (j = parseFloat(l[1]),
             i = parseInt(1 / j))
     } else if (h) {
@@ -33,7 +33,6 @@
         if (m) {
             var n = m.match(/initial\-dpr=([\d\.]+)/)
                 , o = m.match(/maximum\-dpr=([\d\.]+)/);
-            // eslint-disable-next-line no-unused-expressions
             n && (i = parseFloat(n[1]),
                 j = parseFloat((1 / i).toFixed(2))),
                 o && (i = parseFloat(o[1]),
@@ -44,7 +43,6 @@
         var p = (a.navigator.appVersion.match(/android/gi),
             a.navigator.appVersion.match(/iphone/gi))
             , q = a.devicePixelRatio;
-        // eslint-disable-next-line no-unused-expressions
         i = p ? q >= 3 && (!i || i >= 3) ? 3 : q >= 2 && (!i || i >= 2) ? 2 : 1 : 1,
             j = 1 / i
     }
@@ -57,18 +55,14 @@
             f.firstElementChild.appendChild(g);
         else {
             var r = e.createElement("div");
-            // eslint-disable-next-line no-unused-expressions
             r.appendChild(g),
                 e.write(r.innerHTML)
         }
-    // eslint-disable-next-line no-unused-expressions
     a.addEventListener("resize", function () {
-        // eslint-disable-next-line no-unused-expressions
         clearTimeout(d),
             d = setTimeout(c, 300)
     }, !1),
         a.addEventListener("pageshow", function (a) {
-            // eslint-disable-next-line no-unused-expressions
             a.persisted && (clearTimeout(d),
                 d = setTimeout(c, 300))
         }, !1),
