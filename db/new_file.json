@@ -1,0 +1,166 @@
+{ 
+    "_id" : ObjectId("5ca4ad6c1c9118a934aed59c"), 
+    "gc_id" : "1379", 
+    "gc_name" : "茶艺茶道", 
+    "type_id" : "12", 
+    "type_name" : "两个", 
+    "gc_parent_id" : "0", 
+    "commis_rate" : "10", 
+    "gc_sort" : "250", 
+    "gc_virtual" : "0", 
+    "gc_title" : "", 
+    "gc_keywords" : "", 
+    "gc_description" : "", 
+    "show_type" : "1", 
+    "status" : "1", 
+    "image" : "", 
+    "text" : "茶叶/茶具/茶道", 
+    "wap_goodsclass_image_info" : {
+        "image_name" : "_05856708843952032.jpg", 
+        "image_path" : "https://www.aizhiyi.com/data/upload/shop/goods_class/_05856708843952032.jpg", 
+        "image_url" : ""
+    }
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5ca4ad6c1c9118a934aed59d"), 
+    "gc_id" : "1383", 
+    "gc_name" : "民俗文化", 
+    "type_id" : "12", 
+    "type_name" : "两个", 
+    "gc_parent_id" : "0", 
+    "commis_rate" : "10", 
+    "gc_sort" : "249", 
+    "gc_virtual" : "0", 
+    "gc_title" : "", 
+    "gc_keywords" : "", 
+    "gc_description" : "", 
+    "show_type" : "1", 
+    "status" : "1", 
+    "text" : "匠工/文房/民俗", 
+    "wap_goodsclass_image_info" : {
+        "image_name" : "_05856709301275711.jpg", 
+        "image_path" : "https://www.aizhiyi.com/data/upload/shop/goods_class/_05856709301275711.jpg", 
+        "image_url" : ""
+    }
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5ca4ad6c1c9118a934aed59e"), 
+    "gc_id" : "1381", 
+    "gc_name" : "珠宝首饰", 
+    "type_id" : "0", 
+    "type_name" : "", 
+    "gc_parent_id" : "0", 
+    "commis_rate" : "10", 
+    "gc_sort" : "252", 
+    "gc_virtual" : "0", 
+    "gc_title" : "", 
+    "gc_keywords" : "", 
+    "gc_description" : "", 
+    "show_type" : "1", 
+    "status" : "1", 
+    "image" : "", 
+    "text" : "类别/材质/工艺", 
+    "wap_goodsclass_image_info" : {
+        "image_name" : "_05856707787010204.jpg", 
+        "image_path" : "https://www.aizhiyi.com/data/upload/shop/goods_class/_05856707787010204.jpg", 
+        "image_url" : ""
+    }
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5ca4ad6c1c9118a934aed59f"), 
+    "gc_id" : "1384", 
+    "gc_name" : "文化创意", 
+    "type_id" : "0", 
+    "type_name" : "", 
+    "gc_parent_id" : "0", 
+    "commis_rate" : "10", 
+    "gc_sort" : "253", 
+    "gc_virtual" : "0", 
+    "gc_title" : "", 
+    "gc_keywords" : "", 
+    "gc_description" : "", 
+    "show_type" : "1", 
+    "status" : "1", 
+    "image" : "", 
+    "text" : "居家/办公/其它", 
+    "wap_goodsclass_image_info" : {
+        "image_name" : "_05856706581818067.jpg", 
+        "image_path" : "https://www.aizhiyi.com/data/upload/shop/goods_class/_05856706581818067.jpg", 
+        "image_url" : ""
+    }
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5ca4ad6c1c9118a934aed5a0"), 
+    "gc_id" : "1309", 
+    "gc_name" : "个性定制", 
+    "type_id" : "0", 
+    "type_name" : "", 
+    "gc_parent_id" : "0", 
+    "commis_rate" : "10", 
+    "gc_sort" : "254", 
+    "gc_virtual" : "0", 
+    "gc_title" : "", 
+    "gc_keywords" : "", 
+    "gc_description" : "", 
+    "show_type" : "1", 
+    "status" : "1", 
+    "image" : "", 
+    "text" : "文创/民俗/茶道/服饰", 
+    "wap_goodsclass_image_info" : {
+        "image_name" : "_05856706210789201.jpg", 
+        "image_path" : "https://www.aizhiyi.com/data/upload/shop/goods_class/_05856706210789201.jpg", 
+        "image_url" : ""
+    }
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5ca4ad6c1c9118a934aed5a1"), 
+    "gc_id" : "1378", 
+    "gc_name" : "传统工艺", 
+    "type_id" : "0", 
+    "type_name" : "", 
+    "gc_parent_id" : "0", 
+    "commis_rate" : "10", 
+    "gc_sort" : "248", 
+    "gc_virtual" : "0", 
+    "gc_title" : "", 
+    "gc_keywords" : "", 
+    "gc_description" : "", 
+    "show_type" : "1", 
+    "status" : "1", 
+    "image" : "", 
+    "text" : "陶瓷/雕塑/布艺/锻造", 
+    "wap_goodsclass_image_info" : {
+        "image_name" : "_05856724964122215.jpg", 
+        "image_path" : "https://www.aizhiyi.com/data/upload/shop/goods_class/_05856724964122215.jpg", 
+        "image_url" : ""
+    }
+}
+// ----------------------------------------------
+{ 
+    "_id" : ObjectId("5ca4ad6c1c9118a934aed5a2"), 
+    "gc_id" : "1382", 
+    "gc_name" : "特产美食", 
+    "type_id" : "0", 
+    "type_name" : "", 
+    "gc_parent_id" : "0", 
+    "commis_rate" : "10", 
+    "gc_sort" : "251", 
+    "gc_virtual" : "0", 
+    "gc_title" : "", 
+    "gc_keywords" : "", 
+    "gc_description" : "", 
+    "show_type" : "1", 
+    "status" : "1", 
+    "image" : "", 
+    "text" : "粮油/美食/滋补/地方/酒水", 
+    "wap_goodsclass_image_info" : {
+        "image_name" : "_05856708204897367.jpg", 
+        "image_path" : "https://www.aizhiyi.com/data/upload/shop/goods_class/_05856708204897367.jpg", 
+        "image_url" : ""
+    }
+}
