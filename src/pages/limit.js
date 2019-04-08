@@ -82,6 +82,7 @@ const p5Style1={
     fontSize:"16px",
     padding:"0.1rem",
     background:"red",
+    color:"white"
 }
 const p6Style={
      float:"left",
@@ -95,35 +96,66 @@ const zhekouStyle={
     lineHeight:"0.4rem",
     float:"left",
     padding:"0 0.3rem",
-    background:"red"
+    background:"red",
+    color:"white"
 }
 
+const toDouble = (a)=>{
+    if(a<10){
+        return ""+0+a;
+    }else{
+        return a;
+    }
+}
+var timer = null;
 class Limit extends Component{
     constructor(){
         super();
         this.state=({
-            datalist:[]
+            datalist:[],
+            timer:null
         })
     }
-    componentWillMount(){
+
+    toGoods(_id){
         
+        console.log(_id);
+        this.props.history.push({
+            pathname:'/goods',
+            search:'?_id='+_id
+        })
+
     }
 
     async componentWillMount(){
         //请求数据
         
       let {data}= await this.props.axios.get('/fuli/limit')
-      this.setState({
-        datalist:data
-      })
-      console.log("现在",this.state.datalist)
+     timer=setInterval(()=>{
+             this.setState({
+                datalist:data
+          })
+             
+      },1000)
+      const time = Date.now();  
     }
-    render(){
 
+    componentWillUnmount(){
+        
+        clearInterval(timer)
+    }
+
+
+
+    render(){
+     
         return <div className="zero">
             <img src={require("../img/limit.jpg")} style={{width:"7.5rem",height:"3.5rem"}} />
             <ul>{
-                this.state.datalist.map(item =><li style={liStyle} key={item._id}>
+                this.state.datalist.map(item =><li onClick={this.toGoods.bind(this,item._id)} 
+
+                    style={liStyle} key={item._id}>
+                    
                     <img style={imgStyle } src={item.gImg_240} />
 
                     <div className="neirong" style={zeroCStyle}>
@@ -131,15 +163,17 @@ class Limit extends Component{
                     <p style={p3Style}>￥<span>{item.down_price}</span></p>
                     <p style={p4Style}>￥<span>{item.gPrice}</span></p><br/>
                         <p style={p2Style}>已购买：<span>{item.goods_fic_salenum}</span>件</p><br/>
-                        <p style={p6Style}>距结束：{
 
-                            (item.end_time-Date.now())/1000
-                        }</p>
                        
+                        <p  style={p6Style}>距结束：{
+                            item.end_time- Date.now()>0?(
+                             ""+(parseInt((item.end_time- Date.now())/3600000/24)>10?parseInt((item.end_time- Date.now())/3600000/24):("0"+parseInt((item.end_time- Date.now())/3600000/24)) )+" : "+ (parseInt((item.end_time- Date.now())/1000/60%60)>10?parseInt((item.end_time- Date.now())/1000/60%60):("0"+parseInt((item.end_time- Date.now())/1000/60%60))) +" : " +(parseInt((item.end_time- Date.now())/1000%60)>10?parseInt((item.end_time- Date.now())/1000%60):("0"+parseInt((item.end_time- Date.now())/1000%60)))):"00:00:00"
+                            
+                    }</p>  
                         <p style={
-                            item.haveQualification?p5Style1:p5Style
+                            item.end_time- Date.now()>0?p5Style1:p5Style
                         }>{
-                            item.haveQualification?"去抢购":"已结束"
+                            item.end_time- Date.now()>0?"去抢购":"已结束"
                         }</p>
 
                     </div>
@@ -153,4 +187,5 @@ class Limit extends Component{
     }
 }
 Limit = withAxios(Limit)
+
 export default Limit;

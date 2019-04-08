@@ -45,7 +45,10 @@
     "react-app-polyfill": "^0.2.2",
     "react-dev-utils": "^8.0.0",
     "react-dom": "^16.8.6",
+    "react-redux": "^6.0.1",
     "react-scripts": "^2.1.8",
+    "redux": "^4.0.1",
+    "redux-devtools-extension": "^2.13.8",
     "resolve": "1.10.0",
     "sass-loader": "7.1.0",
     "style-loader": "0.23.1",
@@ -123,15 +126,15 @@
   "devDependencies": {
     "babel-plugin-import": "^1.11.0",
     "customize-cra": "^0.2.12",
-    "react-app-rewire-less": "^2.1.3",
-    "react-app-rewire-webpack-bundle-analyzer": "^1.0.1",
-    "react-app-rewired": "^2.1.1",
-    "react-router-dom": "^5.0.0",
     "jsonwebtoken": "^8.5.1",
     "koa": "^2.7.0",
     "koa-router": "^7.4.0",
     "koa-static": "^5.0.0",
     "koa2-cors": "^2.0.6",
-    "mongodb": "^3.2.2"
+    "mongodb": "^3.2.2",
+    "react-app-rewire-less": "^2.1.3",
+    "react-app-rewire-webpack-bundle-analyzer": "^1.0.1",
+    "react-app-rewired": "^2.1.1",
+    "react-router-dom": "^5.0.0"
   }
 }

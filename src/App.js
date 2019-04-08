@@ -70,7 +70,7 @@ class App extends Component {
             <Route path="/cart" component={Cart} />
             <Route path="/user" component={User} />
             {/* <Route path="/" render={()=><div>我的首页</div>} exact/> */}
-            <Redirect from="/" to="/home" />{/* 404 */}
+            {/* 404 */}
           </Switch>
         </header>
         <footer className="footer-nav" id="footer">

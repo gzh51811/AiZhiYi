@@ -5,7 +5,8 @@ import {Switch,Route,Redirect} from 'react-router-dom';
 import Zero from './zero.js';
 import Pingtuan from './pingtuan.js';
 import Limit from './limit.js';
-
+import {connect} from 'react-redux';
+import {bindActionCreators} from 'redux';
 
 /*
     h2的样式
@@ -94,6 +95,9 @@ class Fuli extends Component{
        this.props.history.push('/fuli'+e.key)
            
     }
+    dianji(){
+        console.log("点击了");
+    }
 
 
 
@@ -136,5 +140,15 @@ class Fuli extends Component{
     }
 }
 
+Fuli = connect((state)=>{
+    return {
+        toGoodXq:()=>{
+            console.log("youyouyou")
+        }
+    }
+},(dispatch)=>{
+    return {
 
+    }
+})(Fuli);
 export default Fuli;

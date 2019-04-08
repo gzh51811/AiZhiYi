@@ -83,9 +83,21 @@ class Pingtuan extends Component{
             datalist:[]
         })
     }
-    componentWillMount(){
+  
+ 
+ /*
+ 去详情页
+  */
+    toGoods(_id){
         
+        console.log(_id);
+        this.props.history.push({
+            pathname:'/goods',
+            search:'?_id='+_id
+        })
+
     }
+
 
     async componentWillMount(){
         //请求数据
@@ -96,12 +108,13 @@ class Pingtuan extends Component{
       })
       console.log("现在",this.state.datalist)
     }
+
     render(){
 
         return <div className="zero">
             <img src={require("../img/pingtuan.jpg")} style={{width:"7.5rem",height:"3.5rem"}} />
             <ul>{
-                this.state.datalist.map(item =><li style={liStyle} key={item._id}>
+                this.state.datalist.map(item =><li onClick={this.toGoods.bind(this,item._id)} style={liStyle} key={item._id}>
                     <img style={imgStyle } src={item.gImg} />
 
                     <div className="neirong" style={zeroCStyle}>
