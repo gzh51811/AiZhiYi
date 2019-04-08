@@ -87,7 +87,7 @@ video {
   vertical-align: baseline;
 }
 html {
-  font-size: 50px;
+  font-size: 13.34vw;
 }
 ul {
   list-style: none;
@@ -131,4 +131,7 @@ ul {
 }
 .footer-nav ul p {
   font-size: 12px;
+}
+::-webkit-scrollbar {
+  display: none;
 }
