@@ -67,15 +67,17 @@
 #### 数据库
 
 * goods (商品表)
+  * goods_id    //识别id
   * gTitle        // 商品标题    (string)
   * gDescribe     // 商品描述    (string)
   * gPrice        // 商品价格    (number)
-  * gDiscount     // 折扣        (0 - 9.5)
-  * gWelcome      // 销量        (number) (购物车点击购买 + n)
-  * gSort         // 分类页      (string) (例 : 传统工艺 民俗文化等)
+  * xianshi_discount     // 折扣        (string)
+  * goods_salenum      // 销量        (number) (购物车点击购买 + n)
+  * goods_fic_salenum  //总销量
+  * gc_id_1         // 分类页      (string) (例 : 传统工艺 民俗文化等)
   * gSonSort      // 子分类      (string) (例 : 红茶 绿茶 服饰等)
   * gShop         // 专馆(店铺)  (string) (例 : 文创生活馆)
-  * gImg          // 商品图片    (图片地址)
+  * gImg_240          // 商品图片    (图片地址)
 
 
 * store_list (专馆)
@@ -119,9 +121,9 @@
 
 
 * cart (购物车)
-  * userName      //用户名
-  * cNum          //商品数量       (number)
-  * u_id          //商品的 _id     (objectNumber)
+  * telNumber        //电话号码
+  * cNum                 //商品数量       (number)
+  * goods_id          //商品的 _id     (objectNumber)
 
 * user (用户)
   * uImg          //用户头像        (统一用 : https://www.aizhiyi.com/data/upload/shop/avatar/1.png?timestemp=1554122083174)
