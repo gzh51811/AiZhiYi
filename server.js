@@ -9,7 +9,7 @@ const app = new Koa();//app.context
 
 app.context.myname = 'xiaoai';
 var corsOptions = {
-  origin: 'http://localhost:1833',
+  origin: 'http://localhost:3000',
   credentials: true
 //maxAge: '1728000'
   //这一项是为了跨域专门设置的

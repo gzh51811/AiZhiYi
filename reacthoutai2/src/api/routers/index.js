@@ -11,24 +11,21 @@ var router = new Router();
 const userListRouter = require('./userList.js');
 const tokenverifyRouter = require('./tokenverify.js');
 const loginRouter = require('./login.js');
-
+const fuliRouter = require('./fuli.js');
+const adduserRouter = require('./adduser.js');
 
 router.use(koaBody({
- // 支持formdata
+
  multipart:true,
 
- // 文件支持
+ 
  formidable:{
-     // 指定保存路径
+     
      uploadDir:'./uploads',
      keepExtensions:true,
-     // 改文件名
+     
      onFileBegin(filename,file){
-         // filename: 上传文件的原始名
-         // file:文件信息对象
-         //   * path:
-
-         // file.path = './uploads/'+filename
+         
      }
  }
 }));
@@ -41,5 +38,6 @@ router.use(koaBody({
 router.use('/userList',userListRouter.routes());
 router.use('/login',loginRouter.routes());
 router.use('/tokenverify',tokenverifyRouter.routes());
-
+router.use('/fuli',fuliRouter.routes());
+router.use('/adduser',adduserRouter.routes());
 module.exports = router;

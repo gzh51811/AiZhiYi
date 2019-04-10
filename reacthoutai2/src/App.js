@@ -6,20 +6,27 @@ import AddUser from './pages/addUser.js';
 import Glist from './pages/Glist.js';
 import OrderList from './pages/orderList.js';
 import UserList from './pages/UserList.js';
+import Login from './pages/login.js';
 import {Layout, Menu, Breadcrumb, Icon} from 'antd';
+import "antd/dist/antd.css"
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
-
+const headerStyle = {
+  display:"none"
+}
 const { Header, Content, Footer, Sider} = Layout;
- 
+ const test = true;
+
+
 
 
 class App extends Component {
-  constructor(props) {
+  constructor() {
     super();
     this.state = {
-					login:false,
-					user:{}
+      current:"/glist",
+      login:false,
+			user:{}
     }
     this.toGoodlist = this.toGoodlist.bind(this);
     this.toAddgood = this.toAddgood.bind(this);
@@ -34,7 +41,10 @@ class App extends Component {
 					this.state.user = {}
 			}else{
 					this.state.user = JSON.parse(user);	
-			}
+      }
+      this.setState({
+        current:this.props.location.pathname
+      })
 	}
   toGoodlist(){
     console.log(this)
@@ -88,20 +98,20 @@ class App extends Component {
           <Menu
             mode="inline"
             theme="dark"
-            defaultSelectedKeys={['1']}
+            defaultSelectedKeys={[this.state.current]}
             defaultOpenKeys={['sub1']}
             style={{ height: '100%' }}
           >
             <SubMenu key="sub1" title={<span>商品管理</span>}>
-              <Menu.Item key="1" onClick={this.toGoodlist}>商品列表</Menu.Item>
-              <Menu.Item key="2" onClick={this.toAddgood}>添加商品</Menu.Item>
+              <Menu.Item key="/glist" onClick={this.toGoodlist}>商品列表</Menu.Item>
+              <Menu.Item key="/addgood" onClick={this.toAddgood}>添加商品</Menu.Item>
             </SubMenu>
             <SubMenu key="sub2" title={<span>用户管理</span>}>
-              <Menu.Item key="5" onClick={this.toUserlist} className={this.state.userList}>用户列表</Menu.Item>
-              <Menu.Item key="6" onClick={this.toAdduser}>添加用户</Menu.Item>
+              <Menu.Item key="/userlist" onClick={this.toUserlist}>用户列表</Menu.Item>
+              <Menu.Item key="/adduser" onClick={this.toAdduser}>添加用户</Menu.Item>
             </SubMenu>
             <SubMenu key="sub3" title={<span>订单管理</span>}>
-              <Menu.Item key="9" onClick={this.toOrderlist}>订单列表</Menu.Item>
+              <Menu.Item key="/orderlist" onClick={this.toOrderlist}>订单列表</Menu.Item>
               
             </SubMenu>
           </Menu>
