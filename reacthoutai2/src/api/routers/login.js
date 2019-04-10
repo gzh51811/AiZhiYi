@@ -15,7 +15,7 @@ router.post('/', async (ctx, next) => {
         name,
         pass
     } = ctx.request.body;
-    let res = await db.find('user', {
+    let res = await db.find('shangjia', {
         name,
         pass
     });

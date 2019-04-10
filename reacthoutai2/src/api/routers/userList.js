@@ -5,14 +5,14 @@ const db = require('../db');
 var router = new Router();
 
 router.post('/init',async (ctx,next)=>{
-    let res = await db.find('user',{}); 
+    let res = await db.find('shangjia',{}); 
     ctx.body = res;
 
 })
 router.post('/upDate',async (ctx,next)=>{
 	let {name,newdata}=ctx.request.body;
 	console.log(newdata)
-    let res = await db.update('user',{name}, {
+    let res = await db.update('shangjia',{name}, {
         $set:newdata
       }); 
     ctx.body = res;
@@ -20,13 +20,13 @@ router.post('/upDate',async (ctx,next)=>{
 })
 router.post('/name',async (ctx,next)=>{
 	let {name}=ctx.request.query;
-    let res = await db.find('user',{name}); 
+    let res = await db.find('shangjia',{name}); 
     ctx.body = res;
 
 })
 router.get('/delete',async (ctx,next)=>{
 	let {name}=ctx.request.query;
-    let res = await db.delete('user',{name}); 
+    let res = await db.delete('shangjia',{name}); 
     ctx.body = res;
 
 })

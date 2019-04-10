@@ -7,7 +7,7 @@ router.post('/',async (ctx,next)=>{
     
     let {name,phone,pass,sex,shenfen} = ctx.request.body;
    
-    let res = await db.insert('user',{name,phone,pass,sex,shenfen,time:Date.now()})
+    let res = await db.insert('shangjia',{name,phone,pass,sex,shenfen,time:Date.now()})
     ctx.body = res;
 
 
@@ -17,7 +17,7 @@ router.get('/check',async (ctx,next)=>{
     console.log(ctx.query)
     let {name} = ctx.query;
    
-    let res = await db.find('user',{name});
+    let res = await db.find('shangjia',{name});
     ctx.body=res
 
 })

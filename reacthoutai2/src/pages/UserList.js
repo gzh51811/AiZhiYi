@@ -88,7 +88,7 @@ class EditableTable extends React.Component {
       },
 	   {
 	    title: '手机号码',
-	    dataIndex: 'tel',
+	    dataIndex: 'phone',
 	    width: '25%',
 	    editable: true,
 	  },
