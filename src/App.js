@@ -7,10 +7,15 @@ import Cart from "./pages/Cart";
 import User from "./pages/User";
 import List from "./pages/list";
 import Goods from "./pages/goods";
-import "./App.css";
-import "./rem";
 import { connect } from "react-redux";
 import { Route, Redirect, Switch, withRouter } from "react-router-dom";
+import UserInfo from "./pages/UserInfo";
+import UserSetting from "./pages/UserSetting";
+import UserLogin from "./pages/UserLogin";
+import UserRegister from "./pages/UserRegister";
+import "./base/base.css";
+import "./App.css";
+import "./rem";
 class App extends Component {
   constructor() {
     super();
@@ -91,6 +96,8 @@ class App extends Component {
     );
   }
   render() {
+    let { history } = this.props;
+    let { location } = history;
     return (
       <div>
         <header className="head">
@@ -103,6 +110,10 @@ class App extends Component {
             <Route path="/cate" component={Cate} />
             <Route path="/cart" component={Cart} />
             <Route path="/user" component={User} />
+            <Route path="/user_info" component={UserInfo} />
+            <Route path="/user_setting" component={UserSetting} />
+            <Route path="/user_login" component={UserLogin} />
+            <Route path="/user_register" component={UserRegister} />
             {/* <Route path="/" render={()=><div>我的首页</div>} exact/> */}
             <Redirect from="/" to="/home" />
             {/* 404 */}
@@ -121,6 +132,35 @@ class App extends Component {
                     style={{
                       fontSize: "21px",
                       color: item.name === this.state.current ? "red" : ""
+                    }}
+                  />
+                  <p>{item.text}</p>
+                </li>
+              ))}
+            </ul>
+          </footer>
+        ) : (
+          ""
+        )}
+        {this.state.navs.some(item => {
+          if (item.path === location.pathname) {
+            return true;
+          } else {
+            return false;
+          }
+        }) ? (
+          <footer className="footer-nav" id="footer">
+            <ul>
+              {this.state.navs.map(item => (
+                <li
+                  key={item.name}
+                  onClick={this.handleClick.bind(this, item.name)}
+                >
+                  <Icon
+                    type={item.icon}
+                    style={{
+                      fontSize: ".42rem",
+                      color: item.path === location.pathname ? "red" : ""
                     }}
                   />
                   <p>{item.text}</p>
