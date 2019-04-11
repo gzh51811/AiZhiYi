@@ -1,16 +1,76 @@
 import React, { Component } from "react";
 import "./index.css";
 import { Icon } from "antd";
+import withAxios from "../../hoc/withAxios";
+import Loading from "../loading";
 class Goods extends Component {
   constructor() {
     super();
-    this.state = {};
-    console.log(this);
+    this.state = {
+      goods: ""
+    };
+  }
+  componentWillMount() {
+    let id = this.props.location.search.split("?")[1].split("=")[1];
+    let { axios } = this.props;
+    axios
+      .get("/home", {
+        params: {
+          a: "goods",
+          id: id
+        }
+      })
+      .then(res => {
+        this.setState({
+          goods: res.data[0]
+        });
+      });
+  }
+  shouldComponentUpdate(nextProps, nextState) {
+    if (nextState.goods === this.state.goods) {
+      return false;
+    } else {
+      return true;
+    }
   }
   return = () => {
     this.props.history.goBack("key");
   };
+  addCart = ev => {
+    let { axios } = this.props;
+    let {
+      goods_id,
+      gShop,
+      gImg,
+      gTitle,
+      gDescribe,
+      gPrice,
+      gNumber
+    } = this.state.goods;
+    axios
+      .post("/home", {
+        a: "addCart",
+        goods_id,
+        gShop,
+        gImg,
+        gTitle,
+        gDescribe,
+        gPrice,
+        gNumber
+      })
+      .then(res => {
+        this.refs.cart.style.color = "red";
+      });
+  };
   render() {
+    console.log(this.state);
+    let {
+      gTitle,
+      gDescribe,
+      gImg_240,
+      xianshi_price,
+      goods_fic_salenum
+    } = this.state.goods;
     return (
       <div
         className="goods"
@@ -36,44 +96,46 @@ class Goods extends Component {
             <Icon type="shopping-cart" />
           </div>
         </div>
-        <main className="main">
-          {/* 轮播图 */}
-          <div className="img_Box">
-            <img
-              src="https://www.aizhiyi.com/data/upload/shop/store/goods/162/2018/11/08/162_05950052636511687.jpg?v=14"
-              alt=""
-            />
-          </div>
-          <div className="goods-detail-cnt">
-            <div className="goods-detail-name">
-              <span> 龙泉青瓷听香茶杯_ 梅子青 堂悦坊 </span>
-              <p>创意带盖茶杯 单只礼盒装 龙泉青瓷 匠心之作 润泽如玉</p>
+        {this.state.goods !== "" ? (
+          <main className="main">
+            {/* 轮播图 */}
+            <div className="img_Box">
+              <img src={gImg_240} alt="" />
             </div>
-            <div className="goods-detail-price">
-              <p>
-                <span className="fl">
-                  ￥<em>99.00</em>
-                </span>
-                <span className="discount-test fl">
-                  <span className="discounts">购物满99可省5元</span>
-                </span>
-              </p>
-            </div>
-            {/* 包邮 */}
-            <div className="shipp cfl">
-              <div className="goods-detail-item active cfl ">
-                <span className="fl">包邮</span>
-                <span
-                  style={{
-                    float: "right"
-                  }}
-                >
-                  销量 : 69
-                </span>
+            <div className="goods-detail-cnt">
+              <div className="goods-detail-name">
+                <span> {gTitle} </span>
+                <p>{gDescribe}</p>
+              </div>
+              <div className="goods-detail-price">
+                <p>
+                  <span className="fl">
+                    ￥<em>{xianshi_price}</em>
+                  </span>
+                  <span className="discount-test fl">
+                    <span className="discounts">购物满99可省5元</span>
+                  </span>
+                </p>
+              </div>
+              {/* 包邮 */}
+              <div className="shipp cfl">
+                <div className="goods-detail-item active cfl ">
+                  <span className="fl">包邮</span>
+                  <span
+                    style={{
+                      float: "right"
+                    }}
+                  >
+                    销量 : {goods_fic_salenum}
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-        </main>
+          </main>
+        ) : (
+          <Loading />
+        )}
+
         <div className="bottom">
           <div className="otreh-handle">
             <li>
@@ -90,7 +152,9 @@ class Goods extends Component {
             </li>
           </div>
           <div className="buy-handle">
-            <span>加入购物车</span>
+            <span onClick={this.addCart.bind(this)} ref="cart">
+              加入购物车
+            </span>
             <span>并不想购买</span>
           </div>
         </div>
@@ -98,5 +162,5 @@ class Goods extends Component {
     );
   }
 }
-
+Goods = withAxios(Goods);
 export default Goods;
