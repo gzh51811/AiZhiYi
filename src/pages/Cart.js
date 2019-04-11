@@ -80,11 +80,11 @@ class Cart extends Component{
             },
             headerCart:{
                 display:"none"
-            }
+            },
         }
     }
     componentWillMount(){
-        this.props.axios.get('/goods').then(res=>{
+        this.props.axios.get('/cart').then(res=>{
             console.log(res.data);
             this.setState({
                 goodslist:res.data
@@ -252,7 +252,6 @@ class Cart extends Component{
         this.setState({
             goodslist
         })
-        console.log(goodslist);
     }
     goodAdd(gooditem){
         let {goodslist} = this.state
@@ -303,6 +302,8 @@ class Cart extends Component{
                     </div>
                     </div>
                 </header>
+
+
                 <div className="nctouch-main-layout">
                     {/* 分割线 */}
                     <span className="top_line"></span>
