@@ -4,12 +4,46 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React,{Component} from 'react';
 
-import './User.css';
+// import './User.css';
+import withAxios from '../hoc/withAxios';
+// //引入connect高阶组件
+// import {bindActionCreators} from 'redux';
+// import {connect} from 'react-redux';
+
+// // 引入action
+// import loginAction from '../../actions/loginAction';
 class User extends Component{
     constructor(){
         super();
         this.state = {
-
+            datalist:[{
+                uImg:""
+            }],
+            ren:false
+        }
+    }
+    //获取当前用户登录的信息以及验证token是否正确
+    async componentWillMount(){
+        let telNumber = localStorage.getItem('telNumber');
+        let uImg = localStorage.getItem('uImg');
+        if(telNumber){
+            this.state.ren=true
+        }else{
+            this.state.ren=false
+        }
+        let token = localStorage.getItem('token');
+        if(token){
+            this.props.axios.post('/tokenverify',{
+                token:token
+            }).then(res=>{
+                if(res.data.msg==="success"){
+                    this.setState({
+                        datalist:[{uImg:uImg}]
+                    })
+                }else{
+                    this.props.history.push('/user_login');
+                }
+            })
         }
     }
     gotoUserInfo = ()=>{
@@ -19,16 +53,23 @@ class User extends Component{
         this.props.history.push('/user_login');
     }
     gotoUserSetting = ()=>{
-        this.props.history.push('/user_setting');
+        let telNumber = localStorage.getItem('telNumber');
+        if(telNumber){
+            this.props.history.push('/user_setting');
+        }
+        else{
+            this.props.history.push('/user_login');
+        }
     }
     render(){
         return <div className="scroller-body">
             <div className="scroller-box">
-                {/* <div className='member-top active'>
+                {
+                    this.state.ren?<div className='member-top active'>
                     <div className='member-info'>
                         <div className='user-avatar'>
                             <a href="javascript:;" onClick={this.gotoUserInfo}>
-                                <img src={require("../../images/minren.jpg")} alt=""/>
+                                <img src={this.state.datalist[0].uImg} alt=""/>
                             </a>
                         </div>
                         <a href="javascript:;">
@@ -59,13 +100,15 @@ class User extends Component{
                             关注的好友 (0)
                         </a>
                     </div>
-                </div> */}
-                <div className="member-top">
+                </div>:<div className="member-top">
                     <div className="member-info">
                         <a href="javascript:;" className="default-avatar" onClick={this.gotoLogin}></a>
                         <a href="javascritpt:;" className="to-login" onClick={this.gotoLogin}>点击登录</a>
                     </div>
                 </div>
+                }
+                
+                
                 <div className='member-center'>
                     <dl className='mtn my-order'>
                         <dt>
@@ -205,5 +248,12 @@ class User extends Component{
     }
 }
 
+User = withAxios(User);
+// User = connect(
+//     state=>({
+//         datalist:state.login.data,
+//     }),
+//     dispatch=>bindActionCreators(loginAction,dispatch)
+// )(User)
 
 export default User;

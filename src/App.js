@@ -4,13 +4,13 @@ import Home from './pages/Home';
 import Fuli from './pages/Fuli';
 import Cate from './pages/Cate';
 import Cart from './pages/Cart';
-import User from './pages/User/User';
-import UserInfo from './pages/UserInfo/UserInfo';
-import UserSetting from './pages/UserSetting/UserSetting';
-import UserLogin from './pages/UserLogin/UserLogin';
-import UserRegister from './pages/UserRegister/UserRegister';
+import User from './pages/User';
+import UserInfo from './pages/UserInfo';
+import UserSetting from './pages/UserSetting';
+import UserLogin from './pages/UserLogin';
+import UserRegister from './pages/UserRegister';
 
-import './css/base.css';
+import './base/base.css';
 import './App.css';
 import './rem';
 
@@ -62,7 +62,6 @@ class App extends Component {
       }, () => {
         this.props.history.push('/' + key.toLowerCase());
       });
-      console.log(this);
   }
   render() {
     let {history} = this.props;

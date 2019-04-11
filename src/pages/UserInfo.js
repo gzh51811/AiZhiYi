@@ -3,13 +3,44 @@
 /* eslint-disable no-script-url */
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
+import withAxios from '../hoc/withAxios';
+// import './UserInfo.css';
 
-import './UserInfo.css';
 class UserInfo extends Component {
+    constructor(){
+        super();
+        this.state={
+            datalist:[{
+                uImg:"https://www.aizhiyi.com/data/upload/shop/avatar/1.png?timestemp=1554122083174",
+                telNumber:"",
+                nickname:"",
+                sex:"",
+                birthday:""
+            }],
+        }
+    }
+    componentDidMount(){
+        let telNumber = localStorage.getItem('telNumber');
+        let uImg = localStorage.getItem('uImg');
+        let nickname = localStorage.getItem('nickname');
+        let sex = localStorage.getItem('sex');
+        let birthday = localStorage.getItem('birthday');
+;
+        this.setState({
+            datalist:[{
+                uImg:uImg,
+                telNumber:telNumber,
+                nickname:nickname,
+                sex:sex,
+                birthday:birthday
+            }]
+        })
+    }
     goBack=()=>{
         this.props.history.goBack();
     }
     render() {
+        let {datalist} = this.state;
         return <div>
             <header className="personal_header">
                 <div className="header-wrap">
@@ -39,7 +70,7 @@ class UserInfo extends Component {
                                         <div className="person_pho_b">
                                             <a href="javascript:;"></a>
                                             <a href="javascript:;" className="person_pho_box">
-                                                <img src="https://www.aizhiyi.com/data/upload/shop/avatar/avatar_64711_new.jpg?timestemp=1554296382659" className="person_pho personal-appen" id="face" />
+                                                <img src={datalist[0].uImg} className="person_pho personal-appen" id="face" />
                                             </a>
                                         </div>
                                     </h5>
@@ -49,25 +80,25 @@ class UserInfo extends Component {
                                 <dt className="mem_count">
                                     <a href="javascript:;">
                                         <h3>账号</h3>
-                                        <h5><em className="person_count">17328294525</em></h5>
+                                        <h5><em className="person_count">{datalist[0].telNumber}</em></h5>
                                     </a>
                                 </dt>
                                 <dt className="nickname">
                                     <a href="javascript:;" id="nickname">
                                         <h3>昵称</h3>
-                                        <h5><em className="person_count"></em><i className="arrow-r"></i></h5>
+                                        <h5><em className="person_count">{datalist[0].ncikname}</em><i className="arrow-r"></i></h5>
                                     </a>
                                 </dt>
                                 <dt className="sexbox">
                                     <a href="javascript:;">
                                         <h3>性别</h3>
-                                        <h5><em className="person_count">男</em><i className="arrow-r"></i></h5>
+                                        <h5><em className="person_count">{datalist[0].sex}</em><i className="arrow-r"></i></h5>
                                     </a>
                                 </dt>
 
                                 <dt className="birth_day">
                                     <h3>生日</h3>
-                                    <h5><em className="person_count ui-alert" id="result"></em><i className="arrow-r"></i></h5>
+                                    <h5><em className="person_count ui-alert" id="result">{datalist[0].birthday}</em><i className="arrow-r"></i></h5>
 
                                 </dt>
                             </dl>
@@ -78,5 +109,5 @@ class UserInfo extends Component {
         </div>
     }
 }
-
+UserInfo = withAxios(UserInfo);
 export default UserInfo;

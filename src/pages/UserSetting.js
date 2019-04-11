@@ -2,8 +2,13 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { Component } from 'react';
 
-import './UserSetting.css'
+// import './UserSetting.css'
 class UserSetting extends Component {
+    loginout = ()=>{
+        localStorage.removeItem('telNumber');
+        localStorage.removeItem('token');
+        this.props.history.push('/user_login');
+    }
     goBack = ()=>{
         this.props.history.goBack();
     }
@@ -34,7 +39,7 @@ class UserSetting extends Component {
                     </ul>
                 </div>
                 <ul className="nctouch-default-list set loginout">
-                    <li><a id="logoutbtn" href="javascript:void(0);"><h4>退出登录</h4></a></li>
+                    <li><a id="logoutbtn" href="javascript:void(0);" onClick={this.loginout}><h4>退出登录</h4></a></li>
                 </ul>
             </div>
         </div>
