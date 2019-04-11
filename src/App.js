@@ -100,7 +100,7 @@ class App extends Component {
     let { location } = history;
     return (
       <div>
-        <header className="head">
+        <div className="head">
           <Switch>
             <Route path="/home" component={Home} />
             <Route path="/fuli" component={Fuli} />
@@ -118,7 +118,7 @@ class App extends Component {
             <Redirect from="/" to="/home" />
             {/* 404 */}
           </Switch>
-        </header>
+        </div>
         {this.state.listNav === "show" ? (
           <footer className="footer-nav" id="footer">
             <ul>

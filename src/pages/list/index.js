@@ -91,30 +91,30 @@ class List extends Component {
               className="shop-cart"
             />
           </div>
-          <div className="nctouch-main-layout  mb20">
+          <div className="nctouch-main-layout-hlq  mb20">
             <div style={{ overflowX: "hidden", height: "100%" }}>
-              <ul className="goods-secrch-list clear_float">
+              <ul className="goods-secrch-list-hlq clear_float">
                 {this.state.list_how.map(item => {
                   return (
                     <li
-                      className="goods-item"
+                      className="goods-item-hlq"
                       key={item.goods_id}
                       onClick={this.detail.bind(this, item.goods_id)}
                     >
-                      <span className="goods-pic">
+                      <span className="goods-pic-hlq">
                         <img src={item.gImg_240} alt="" />
                       </span>
-                      <div className="goods-info">
-                        <div className="goods-name">
+                      <div className="goods-info-hlq">
+                        <div className="goods-name-hlq">
                           <h4> {item.gTitle}</h4>
                         </div>
-                        <div className="goods-sale">
-                          <span className="goods-price">
+                        <div className="goods-sale-hlq">
+                          <span className="goods-price-hlq">
                             <i>￥</i>
                             <em>{item.xianshi_price}</em>
                           </span>
                         </div>
-                        <p className="por-fk">
+                        <p className="por-fk-hlq">
                           <span>{item.goods_fic_salenum}</span>人已付款
                         </p>
                         <Icon

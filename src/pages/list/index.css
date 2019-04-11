@@ -39,7 +39,7 @@
   margin-bottom: 0 !important;
 }
 
-.nctouch-main-layout {
+.nctouch-main-layout-hlq {
   position: fixed;
   top: 0;
   padding-top: 1.78rem;
@@ -55,15 +55,15 @@
   background: #fff;
   z-index: 999;
 }
-.goods-secrch-list {
+.goods-secrch-list-hlq {
   font-size: 0;
   display: block;
-
   height: auto;
   overflow-y: auto;
   overflow-x: hidden;
+  height: 100vh;
 }
-.goods-secrch-list .goods-item {
+.goods-secrch-list-hlq .goods-item-hlq {
   vertical-align: top;
   display: inline-block;
   width: 47%;
@@ -75,28 +75,28 @@
   background: #fff;
   border-radius: 0.2rem;
 }
-.goods-secrch-list .goods-pic {
+.goods-secrch-list-hlq .goods-pic-hlq {
   display: block;
   width: 100%;
   height: 100%;
 }
-.goods-secrch-list .goods-pic img {
+.goods-secrch-list-hlq .goods-pic-hlq img {
   width: 3.6rem;
   height: 3.6rem;
 }
-.goods-secrch-list .goods-info {
+.goods-secrch-list-hlq .goods-info-hlq {
   height: 1.7rem;
   display: block;
   padding: 0 0.18rem 0.2rem;
   position: relative;
 }
-.goods-secrch-list .goods-name {
+.goods-secrch-list-hlq .goods-name {
   display: block;
   overflow: hidden;
   display: block;
   color: #111;
 }
-.goods-secrch-list .goods-name h4 {
+.goods-secrch-list-hlq .goods-name h4 {
   font-size: 0.28rem;
   line-height: 0.37rem;
   height: 0.37rem;
@@ -107,23 +107,23 @@
   margin-bottom: 0.2rem;
   margin-top: 0.16rem;
 }
-.goods-secrch-list .goods-sale {
+.goods-secrch-list-hlq .goods-sale-hlq {
   height: 0.3rem;
   padding: 0 0 0.1rem 0;
   overflow: hidden;
 }
-.goods-secrch-list .goods-price {
+.goods-secrch-list-hlq .goods-price-hlq {
   color: #d62327;
   font-size: 0.24rem;
   line-height: 0.3rem;
   display: block;
   float: left;
 }
-.goods-price i {
+.goods-price-hlq i {
   position: relative;
   top: -1px;
 }
-.goods-secrch-list .goods-price em {
+.goods-secrch-list-hlq .goods-price-hlq em {
   font-size: 0.3rem;
   line-height: 0.3rem;
   vertical-align: top;
@@ -132,7 +132,7 @@
   top: -1px;
   margin-left: 0.1rem;
 }
-.goods-item p {
+.goods-item-hlq p {
   color: #999;
   font-size: 0.22rem;
   margin-top: 0.08rem;
