@@ -106,7 +106,7 @@ class List extends Component {
                       </span>
                       <div className="goods-info-hlq">
                         <div className="goods-name-hlq">
-                          <h4> {item.gTitle}</h4>
+                          <h4 style={{ fontSize: "14px" }}> {item.gTitle}</h4>
                         </div>
                         <div className="goods-sale-hlq">
                           <span className="goods-price-hlq">
