@@ -1,7 +1,7 @@
 import React from "react";
 import axios from "axios";
 
-axios.defaults.baseURL = "../";
+axios.defaults.baseURL = "http://localhost:1822";
 
 /**
  * 高阶组件：包装函数

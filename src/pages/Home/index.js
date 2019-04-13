@@ -2,7 +2,7 @@
  * @writer: 咕鸽仙人
  * @LastEditors: 咕鸽仙人
  * @Date: 2019-04-03 11:13:45
- * @LastEditTime: 2019-04-11 22:27:00
+ * @LastEditTime: 2019-04-13 16:54:49
  * @ 首页
  */
 import React, { Component } from "react";
@@ -81,7 +81,7 @@ class Home extends Component {
   componentWillMount() {
     let { axios } = this.props;
     axios
-      .post("/home", {
+      .post("/routeHome", {
         a: "saleNum",
         num: 500
       })
@@ -99,7 +99,7 @@ class Home extends Component {
     // 请求精品推荐
     setTimeout(() => {
       axios
-        .post("/home", {
+        .post("/routeHome", {
           a: "saleNum",
           num: 300
         })

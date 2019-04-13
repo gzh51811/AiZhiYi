@@ -2,7 +2,7 @@
  * @writer: 咕鸽仙人
  * @LastEditors: 咕鸽仙人
  * @Date: 2019-03-01 22:51:52
- * @LastEditTime: 2019-04-11 23:37:56
+ * @LastEditTime: 2019-04-13 16:54:10
  * @路由分配
  */
 const Koa = require("koa");
@@ -48,7 +48,7 @@ const tokenRouter = require("./tokenverify");
 router.use("/fuli", fuliRouter.routes());
 router.use("/register", registerRouter.routes());
 router.use("/login", loginRouter.routes());
-router.use("/home", homeRouter.routes());
+router.use("/routeHome", homeRouter.routes());
 router.use("/cart", cartRouter.routes());
 router.use("/tokenverify", tokenRouter.routes());
 router.use("/ces", cesRouter.routes());

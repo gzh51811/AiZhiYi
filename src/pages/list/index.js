@@ -53,7 +53,7 @@ class List extends Component {
     let gc_id = this.props.location.search.split("?")[1].split("=")[1];
 
     axios
-      .get("/home", {
+      .get("/routeHome", {
         params: {
           a: "classify",
           gc_id_1: gc_id

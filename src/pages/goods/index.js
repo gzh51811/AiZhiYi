@@ -14,7 +14,7 @@ class Goods extends Component {
     let id = this.props.location.search.split("?")[1].split("=")[1];
     let { axios } = this.props;
     axios
-      .get("/home", {
+      .get("/routeHome", {
         params: {
           a: "goods",
           id: id
@@ -48,7 +48,7 @@ class Goods extends Component {
       gNumber
     } = this.state.goods;
     axios
-      .post("/home", {
+      .post("/routeHome", {
         a: "addCart",
         goods_id,
         gShop,
