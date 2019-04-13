@@ -2,7 +2,7 @@
  * @writer: 咕鸽仙人
  * @LastEditors: 咕鸽仙人
  * @Date: 2019-03-01 22:51:52
- * @LastEditTime: 2019-04-13 16:54:10
+ * @LastEditTime: 2019-04-13 17:24:45
  * @路由分配
  */
 const Koa = require("koa");
@@ -52,4 +52,12 @@ router.use("/routeHome", homeRouter.routes());
 router.use("/cart", cartRouter.routes());
 router.use("/tokenverify", tokenRouter.routes());
 router.use("/ces", cesRouter.routes());
+
+// 引入页面路由
+
+const cateRouter = require("./cate.js");
+// lmg添加
+router.use("/fuli", fuliRouter.routes());
+router.use("/cate", cateRouter.routes());
+
 module.exports = router;
