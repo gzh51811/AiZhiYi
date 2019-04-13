@@ -83,7 +83,7 @@ class Cart extends Component {
     };
   }
   componentWillMount() {
-    this.props.axios.get("/cart").then(res => {
+    this.props.axios.get("/routeCart").then(res => {
       console.log(res.data);
       this.setState(
         {
@@ -295,8 +295,7 @@ class Cart extends Component {
     } = this.state;
     return (
       <div>
-        {/* <div className="load_wrap" style={fix}>
-                </div> */}
+        <div className="load_wrap" style={fix} />
         <header className="header-cart" style={headerCart}>
           <div className="header-wrap">
             <div className="header-l">
